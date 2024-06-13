@@ -3,6 +3,36 @@
 // *****
 // *****
 // *****
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+//     int row, col;
+
+//     cout << "Enter number of rows and columns: ";
+//     cin >> row >> col;
+
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             cout << "* ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+
 #include <iostream>
 
 using namespace std;
@@ -18,7 +48,14 @@ int main()
     {
         for (int j = 0; j < col; j++)
         {
-            cout << "* ";
+            if (i == 0 || i == row - 1 || j == 0 || j == col - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
         }
         cout << endl;
     }
