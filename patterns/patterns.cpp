@@ -33,32 +33,61 @@
 // *   *
 // *****
 
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+//     int row, col;
+
+//     cout << "Enter number of rows and columns: ";
+//     cin >> row >> col;
+
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < col; j++)
+//         {
+//             if (i == 0 || i == row - 1 || j == 0 || j == col - 1)
+//             {
+//                 cout << "*";
+//             }
+//             else
+//             {
+//                 cout << " ";
+//             }
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// *****
+// ****
+// ***
+// **
+// *
+
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int row, col;
+    int row;
 
-    cout << "Enter number of rows and columns: ";
-    cin >> row >> col;
+    cout << "Enter number of rows : ";
+    cin >> row;
 
-    for (int i = 0; i < row; i++)
+    for (int i = row; i > 0; i--)
     {
-        for (int j = 0; j < col; j++)
+        for (int j = 0; j < i; j++)
         {
-            if (i == 0 || i == row - 1 || j == 0 || j == col - 1)
-            {
-                cout << "*";
-            }
-            else
-            {
-                cout << " ";
-            }
+            cout << "*";
         }
+
         cout << endl;
     }
-
     return 0;
 }
