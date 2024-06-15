@@ -223,6 +223,61 @@
 // spaces = 1 to 2*(n-row no.)
 // stars = 1 to 2*row no.  -  1
 
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n;
+//     cout << "enter n :- ";
+//     cin >> n;
+
+//     // upper triangle
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= 2 * (n - i); j++) // spaces
+//         {
+//             cout << " ";
+//         }
+
+//         for (int j = 1; j <= (2 * i) - 1; j++) // stars
+//         {
+//             cout << "*" << " ";
+//         }
+
+//         cout << endl;
+//     }
+
+//     // lower triangle
+//     for (int i = n; i >= 1; i--)
+//     {
+//         for (int j = 1; j <= 2 * (n - i); j++) // spaces
+//         {
+//             cout << " ";
+//         }
+
+//         for (int j = 1; j <= (2 * i) - 1; j++) // stars
+//         {
+//             cout << "*" << " ";
+//         }
+
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+////////////////////////////////////////////////
+
+// enter n :- 9
+//   *   *
+//  * * * *
+// *   *   *
+
+// logic :- excluding row 2
+// all the stars at at postion where the sum(i+j) is divisible by 4 (((i+j%4==0)))
+// on row 2 print stars at only (coloumn %4==0)
+
 #include <iostream>
 using namespace std;
 
@@ -232,33 +287,18 @@ int main()
     cout << "enter n :- ";
     cin >> n;
 
-    // upper triangle
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= 3; i++)
     {
-        for (int j = 1; j <= 2 * (n - i); j++) // spaces
+        for (int j = 1; j <= n; j++)
         {
-            cout << " ";
-        }
-
-        for (int j = 1; j <= (2 * i) - 1; j++) // stars
-        {
-            cout << "*" << " ";
-        }
-
-        cout << endl;
-    }
-
-    // lower triangle
-    for (int i = n; i >= 1; i--)
-    {
-        for (int j = 1; j <= 2 * (n - i); j++) // spaces
-        {
-            cout << " ";
-        }
-
-        for (int j = 1; j <= (2 * i) - 1; j++) // stars
-        {
-            cout << "*" << " ";
+            if (((i + j) % 4 == 0) || ((i == 2) && (j % 4 == 0)))
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
         }
 
         cout << endl;
